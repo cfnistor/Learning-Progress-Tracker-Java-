@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: <code>Method</code>
+  - text: <code>Field</code>
+  - text: <code>Constructor</code>
+  - text: <code>Modifier</code>
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8106#comment
+status: Solved
+record: -1
+local_check: false

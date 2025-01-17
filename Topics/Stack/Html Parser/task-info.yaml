@@ -1,0 +1,34 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3658#comment
+status: Failed
+feedback:
+  message: |
+    Failed test #1 of 8. Wrong answer
+
+    This is a sample test from the problem statement!
+
+    Test input:
+    <html><a>hello</a><h1><h4>nestedHello</h4><h3>nestedWorld</h3><h6><br>top</br></h6></h1><br>world</br></html>
+    Correct output:
+    hello
+    nestedHello
+    nestedWorld
+    top
+    <br>top</br>
+    <h4>nestedHello</h4><h3>nestedWorld</h3><h6><br>top</br></h6>
+    world
+    <a>hello</a><h1><h4>nestedHello</h4><h3>nestedWorld</h3><h6><br>top</br></h6></h1><br>world</br>
+
+    Your code output:
+    hello
+    nestedHello
+    nestedWorld
+    top
+    world
+  time: "Sun, 12 Jan 2025 16:49:18 UTC"
+record: -1
+submission_language: java17
