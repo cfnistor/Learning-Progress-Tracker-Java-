@@ -1,7 +1,5 @@
 package tracker;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Learning Progress Tracker");
@@ -9,5 +7,10 @@ public class Main {
         Menu.run();
 
         System.out.println("Bye!");
+        ScannerUtil.closeScanner();
+    }
+
+    public static void backupMain() {
+
     }
 }

@@ -1,1 +1,30 @@
-.idea
+# Gradle-specific files
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Dependency caches
+**/out/
+**/.gradletaskname-cache/
+**/.gradle/caches/
+**/.gradle/gradle-user-home/
+
+# Logs
+*.log
+*.log.*
+
+# IntelliJ IDEA
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.class
+*.war
+*.ear
+
+# Environment files
+.env
