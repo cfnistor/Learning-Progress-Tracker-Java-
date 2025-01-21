@@ -6,3 +6,6 @@ content:
   - hashCode() and equals()
   - Stack
   - Choosing the right collection
+  - Comparator
+  - Regexes in programs
+  - Patterns and Matcher
