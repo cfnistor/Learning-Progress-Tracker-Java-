@@ -9,3 +9,8 @@ content:
   - Comparator
   - Regexes in programs
   - Patterns and Matcher
+  - Match results
+  - Replacing characters with Regex
+  - Encapsulating object creation
+  - Strategy
+  - Template method

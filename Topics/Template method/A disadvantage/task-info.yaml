@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "As the number of steps grows, it becomes too difficult to maintain"
+  - text: It's difficult to clone complex object
+  - text: Increases response time from the service
+  - text: It takes a lot of memory with the growing of snapshots
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5158#comment
+status: Solved
+record: -1
+local_check: false
