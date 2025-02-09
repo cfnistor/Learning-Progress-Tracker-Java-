@@ -14,3 +14,5 @@ content:
   - Encapsulating object creation
   - Strategy
   - Template method
+  - Standard functional interfaces
+  - Function composition

@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25673/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Sat, 25 Jan 2025 10:43:21 UTC"
+update_date: "Sun, 09 Feb 2025 01:05:18 UTC"
 stages:
   - id: 979
     step: 14396
@@ -86,10 +86,10 @@ topics:
       theory_id: 3503
     - title: One-line condition with ternary operator
       theory_id: 3506
-    - title: While and do-while loops
-      theory_id: 3498
     - title: For loop
       theory_id: 3505
+    - title: While and do-while loops
+      theory_id: 3498
     - title: Break and continue. Branching
       theory_id: 3507
     - title: Declaring methods
@@ -120,14 +120,14 @@ topics:
       theory_id: 3536
     - title: First glance at exceptions
       theory_id: 3497
-    - title: Hierarchy of exceptions
-      theory_id: 3570
-    - title: Exception handling
-      theory_id: 3552
     - title: NullPointerException
       theory_id: 1945
     - title: What is object-oriented programming
       theory_id: 3614
+    - title: Hierarchy of exceptions
+      theory_id: 3570
+    - title: Exception handling
+      theory_id: 3552
     - title: What are bugs
       theory_id: 5504
     - title: Introduction to logging
