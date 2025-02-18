@@ -5,3 +5,5 @@ content:
   - Check IP address
   - Vehicle registration number
   - Illegal identifiers
+  - Finding digit-letter sequences with regex
+  - Check the date

@@ -24,7 +24,11 @@ class Score implements Comparable<Score> {
 
     @Override
     public int compareTo(Score score) {
-        // your code here
+        if (this.totalScore == score.getTotalScore()) {
+            return this.player.compareTo(score.getPlayer());
+        } else {
+            return Integer.compare(this.totalScore, score.getTotalScore());
+        }
     }
 }
 
