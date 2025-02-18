@@ -1,0 +1,11 @@
+content:
+  - Theory
+  - Comparing objects
+  - compareTo
+  - Rules
+  - Rewrite compareTo method
+  - Implement Comparable
+  - Implement comparing by additional fields
+  - Ratings
+  - Value class
+  - Leaderboard
