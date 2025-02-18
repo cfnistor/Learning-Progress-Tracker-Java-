@@ -33,6 +33,12 @@ public enum Command {
             System.out.println("Enter 'exit' to exit the program");
         }
     },
+    STATISTICS("statistics") {
+        @Override
+        public void execute() {
+            Menu.statistics(ScannerUtil.getScanner());
+        }
+    },
     UNKNOWN("unknown") {
         @Override
         public void execute() {

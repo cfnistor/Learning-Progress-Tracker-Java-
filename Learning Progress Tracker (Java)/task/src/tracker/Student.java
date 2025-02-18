@@ -13,6 +13,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
+    private Map<Course, Integer> courseActivity = new EnumMap<>(Course.class);
     private Map<Course, Integer> coursePoints = new EnumMap<>(Course.class);
     private static Map<Integer, Student> students = new HashMap<>();
     private static Set<String> emails = new HashSet<>();
@@ -26,11 +27,16 @@ public class Student {
         // Initialize course points to 0
         for (Course course : Course.values()) {
             coursePoints.put(course, 0);
+            courseActivity.put(course, 0);
         }
     }
 
     public int getId() {
         return id;
+    }
+
+    public Map<Course, Integer> getAssignmentCounter() {
+        return courseActivity;
     }
 
     public static void resetIdCounter() {
@@ -54,7 +60,11 @@ public class Student {
     }
 
     public void addPoints(Course course, int points) {
-        coursePoints.put(course, coursePoints.get(course) + points);
+
+        coursePoints.put(course, coursePoints.getOrDefault(course, 0) + points);
+        if (points > 0) {
+            courseActivity.put(course, courseActivity.getOrDefault(course, 0) + 1);
+        }
     }
 
     public static boolean updatePoints(String inputId, int javaPoints, int dsaPoints, int dbPoints, int springPoints) {

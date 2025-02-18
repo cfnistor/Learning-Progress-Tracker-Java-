@@ -1,6 +1,7 @@
 package tracker;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -34,7 +35,22 @@ public class Menu {
                             System.out.println(result);
                         }
                     } while (!"back".equalsIgnoreCase(result));
+                } else if(command == Command.STATISTICS) {
+                    System.out.println("Type the name of a course to see details or 'back' to quit:");
+                    Statistics statistics = new Statistics();
+                    for (String line : statistics.listOverall()) {
+                        System.out.println(line);
+                    }
 
+                    List<String> result;
+                    do {
+                        result = statistics(scanner);
+                        if (!"back".equalsIgnoreCase(input)) {
+                            for (String line : result) {
+                                System.out.println(line);
+                            }
+                        }
+                    } while (!"back".equalsIgnoreCase(result.getFirst()));
                 } else {
                     command.execute();
                 }
@@ -118,5 +134,16 @@ public class Menu {
         }
 
         return student.printDetails();
+    }
+
+    public static List<String> statistics(Scanner scanner) {
+        String input = scanner.nextLine().trim();
+
+        if ("back".equalsIgnoreCase(input)) {
+            System.out.println("back");
+        }
+
+
+        return Statistics.getCourseStats(input);
     }
 }
