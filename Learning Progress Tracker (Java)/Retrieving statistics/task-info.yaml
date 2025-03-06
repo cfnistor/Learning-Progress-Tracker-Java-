@@ -40,56 +40,8 @@ files:
     visible: true
     learner_created: true
 feedback_link: https://hyperskill.org/learn/step/14399#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #35
-
-    Expected least popular: n/a, but your output was: Least popular: Java, DSA, Databases, Spring
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    Learning Progress Tracker
-    &gt; add students
-    Enter student credentials or &#39;back&#39; to return:
-    &gt; Alexina Belcher address1@mail.com
-    The student has been added.
-    &gt; Carmella Campman address2@mail.com
-    The student has been added.
-    &gt; Olga Rosanne address3@mail.com
-    The student has been added.
-    &gt; Nonna Miko address4@mail.com
-    The student has been added.
-    &gt; back
-    Total 4 students have been added.
-    &gt; list
-    Students:
-    10000
-    10001
-    10002
-    10003
-    &gt; add points
-    Enter an id and points or &#39;back&#39; to return
-    &gt; 10000 5 4 3 1
-    Points updated.
-    &gt; 10001 5 4 3 1
-    Points updated.
-    &gt; 10002 5 4 3 1
-    Points updated.
-    &gt; 10003 5 4 3 1
-    Points updated.
-    &gt; back
-    back
-    &gt; statistics
-    Type the name of a course to see details or &#39;back&#39; to quit:
-    Most popular: Java, DSA, Databases, Spring
-    Least popular: Java, DSA, Databases, Spring
-    Highest activity: Java, DSA, Databases, Spring
-    Lowest activity: Java, DSA, Databases, Spring
-    Easiest course: Java
-    Hardest course: Spring
-  time: "Thu, 06 Mar 2025 21:33:39 UTC"
+  message: Congratulations!
+  time: "Thu, 06 Mar 2025 22:57:12 UTC"
 record: 4

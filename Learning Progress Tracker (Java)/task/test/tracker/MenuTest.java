@@ -148,13 +148,13 @@ class MenuTest {
         assertEquals("Most popular: Java, DSA, Databases, Spring", result.getFirst());
 
         assertTrue(result.get(1).startsWith("Least popular:"));
-        assertEquals("Least popular: Java, DSA, Databases, Spring", result.get(1));
+        assertEquals("Least popular: n/a", result.get(1));
 
         assertTrue(result.get(2).startsWith("Highest activity:"));
         assertEquals("Highest activity: Java, DSA, Databases, Spring", result.get(2));
 
         assertTrue(result.get(3).startsWith("Lowest activity:"));
-        assertEquals("Lowest activity: Java, DSA, Databases, Spring", result.get(3));
+        assertEquals("Lowest activity: n/a", result.get(3));
 
         assertTrue(result.get(4).startsWith("Easiest course:"));
         assertEquals("Easiest course: Java", result.get(4));
