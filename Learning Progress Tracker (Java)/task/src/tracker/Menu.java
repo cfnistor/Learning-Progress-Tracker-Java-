@@ -1,6 +1,7 @@
 package tracker;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -47,7 +48,21 @@ public class Menu {
                         result = statistics(scanner);
                         if (!"back".equalsIgnoreCase(input)) {
                             for (String line : result) {
-                                System.out.println(line);
+                                if (line.equalsIgnoreCase("back")) {
+                                    break;
+                                }
+
+                                Course course = Course.fromString(line);
+                                if (course == null) {
+                                    System.out.println("Unknown course.");
+                                    break;
+                                }
+
+                                System.out.println(line.substring(0, 1).toUpperCase() + line.substring(1));
+
+                                for (String courseStatsLine : Statistics.getTopStudents(course)) {
+                                    System.out.println(courseStatsLine);
+                                }
                             }
                         }
                     } while (!"back".equalsIgnoreCase(result.getFirst()));
@@ -137,13 +152,17 @@ public class Menu {
     }
 
     public static List<String> statistics(Scanner scanner) {
-        String input = scanner.nextLine().trim();
+        if (scanner.hasNextLine()) {
+            String input = scanner.nextLine().trim();
 
-        if ("back".equalsIgnoreCase(input)) {
-            System.out.println("back");
+            if ("back".equalsIgnoreCase(input)) {
+                System.out.println("back");
+            }
+
+
+            return Statistics.getCourseStats(input);
         }
 
-
-        return Statistics.getCourseStats(input);
+        return Collections.emptyList();
     }
 }

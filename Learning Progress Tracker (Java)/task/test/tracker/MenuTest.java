@@ -4,9 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
 import java.util.List;
 import java.util.Scanner;
 
@@ -100,11 +97,10 @@ class MenuTest {
     }
 
     @Test
-    void testStatisticsValid() {
-        String inputCourse = "java";
-        Scanner scannerInputCourse = new Scanner(new ByteArrayInputStream(inputCourse.getBytes()));
+    void testStatisticsValidV1() {
 
-        List<String> result = Menu.statistics(scannerInputCourse);
+        Statistics statistics = new Statistics();
+        List<String> result = statistics.listOverall();
 
         assertEquals(6, result.size());
 
@@ -125,5 +121,58 @@ class MenuTest {
 
         assertTrue(result.get(5).startsWith("Hardest course:"));
         assertEquals("Hardest course: Spring", result.get(5));
+    }
+
+    @Test
+    void testStatisticsValidV2() {
+        Student.getStudents().clear();
+        Student.getEmails().clear();
+        Student.resetIdCounter();
+
+        Student.addStudent("Alexina Belcher address1@mail.com");
+        Student.addStudent("Carmella Campman address2@mail.com");
+        Student.addStudent("Olga Rosanne address3@mail.com");
+        Student.addStudent("Nonna Miko address4@mail.com");
+
+        Student.updatePoints("10000", 5, 4, 3, 1);
+        Student.updatePoints("10001", 5, 4, 3, 1);
+        Student.updatePoints("10002", 5, 4, 3, 1);
+        Student.updatePoints("10003", 5, 4, 3, 1);
+
+        Statistics statistics = new Statistics();
+        List<String> result = statistics.listOverall();
+
+        assertEquals(6, result.size());
+
+        assertTrue(result.getFirst().startsWith("Most popular:"));
+        assertEquals("Most popular: Java, DSA, Databases, Spring", result.getFirst());
+
+        assertTrue(result.get(1).startsWith("Least popular:"));
+        assertEquals("Least popular: Java, DSA, Databases, Spring", result.get(1));
+
+        assertTrue(result.get(2).startsWith("Highest activity:"));
+        assertEquals("Highest activity: Java, DSA, Databases, Spring", result.get(2));
+
+        assertTrue(result.get(3).startsWith("Lowest activity:"));
+        assertEquals("Lowest activity: Java, DSA, Databases, Spring", result.get(3));
+
+        assertTrue(result.get(4).startsWith("Easiest course:"));
+        assertEquals("Easiest course: Java", result.get(4));
+
+        assertTrue(result.get(5).startsWith("Hardest course:"));
+        assertEquals("Hardest course: Spring", result.get(5));
+    }
+
+    @Test
+    void testStatsCourseJava() {
+        String inputCourse = "java";
+
+        List<String> results = Statistics.getTopStudents(Course.fromString(inputCourse));
+
+        assertEquals(3, results.size());
+
+        assertEquals("id    points    completed", results.getFirst());
+        assertEquals("10001 24        4.0%", results.get(1));
+        assertEquals("10000 21        3.5%", results.get(2));
     }
 }

@@ -1,5 +1,11 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: Since Java 8 there сannot be collisions in HashMap
+  - text: HashMap is very effective for accessing the elements
+  - text: "In most cases, HashMap provides O(1) complexity for get() and put() methods"
+  - text: The order of the elements in HashMap is always the same
+  - text: HashMap is mutable. You can change and delete elements from it
 files:
   - name: src/Task.java
     visible: true

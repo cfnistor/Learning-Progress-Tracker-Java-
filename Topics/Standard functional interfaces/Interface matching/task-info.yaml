@@ -1,4 +1,16 @@
 type: matching
+captions:
+  - IntSupplier
+  - Consumer&lt;String&gt;
+  - "BiPredicate&lt;Integer, Integer&gt;"
+  - DoubleUnaryOperator
+  - "Function&lt;Double, String&gt;"
+options:
+  - () -&gt; 3
+  - "(x, y) -&gt; x % y == 0"
+  - System.out::println
+  - Math::sin
+  - (x) -&gt; String.valueOf(x * x)
 files:
   - name: src/Task.java
     visible: true
@@ -6,3 +18,9 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2396#comment
 status: Solved
 record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

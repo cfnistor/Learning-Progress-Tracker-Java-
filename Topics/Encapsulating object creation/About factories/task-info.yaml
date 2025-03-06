@@ -1,5 +1,11 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: A class that represents a factory must have several fields and one or zero
+      methods.
+  - text: There is only a single type of factories named <b>simple factory</b>.
+  - text: A factory can be used by multiple clients.
+  - text: Factories protect the client code from changes.
 files:
   - name: src/Task.java
     visible: true

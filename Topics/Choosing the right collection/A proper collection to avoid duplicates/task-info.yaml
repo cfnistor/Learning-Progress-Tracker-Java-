@@ -1,5 +1,10 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: HashSet
+  - text: ArrayList
+  - text: Any implementation of the Collection interface
+  - text: TreeSet
 files:
   - name: src/Task.java
     visible: true

@@ -1,5 +1,12 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: returns 0
+  - text: throws IllegalStateException
+  - text: returns 30
+  - text: returns 10
+  - text: returns false
+  - text: returns 3
 files:
   - name: src/Task.java
     visible: true

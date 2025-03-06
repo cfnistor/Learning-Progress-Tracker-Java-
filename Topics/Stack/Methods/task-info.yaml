@@ -1,5 +1,9 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: peek()
+  - text: push()
+  - text: pop()
 files:
   - name: src/Task.java
     visible: true

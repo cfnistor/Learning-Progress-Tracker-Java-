@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: Providers
+  - text: Operators
+  - text: Suppliers
+  - text: Generators
+  - text: Consumers
 files:
   - name: src/Task.java
     visible: true

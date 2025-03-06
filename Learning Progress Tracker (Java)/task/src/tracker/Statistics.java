@@ -1,9 +1,7 @@
 package tracker;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Statistics {
     private static Map<Integer, Student> students = Student.getStudents();
@@ -109,6 +107,27 @@ public class Statistics {
         List<String> results = new ArrayList<>();
         results.add(course);
 
+
         return results;
+    }
+
+    public static List<String> getTopStudents(Course course) {
+        List<String> result = new ArrayList<>();
+        result.add(String.format("%-5s %-9s %s", "id", "points", "completed"));
+
+        students.values().stream()
+                .filter(student -> student.getCoursePoints().getOrDefault(course, 0) > 0)
+                .sorted(Comparator.comparing((Student s) -> s.getCoursePoints().getOrDefault(course, 0))
+                        .reversed()
+                        .thenComparing(Student::getId))
+                .limit(3)
+                .map(student -> {
+                    int points = student.getCoursePoints().getOrDefault(course, 0);
+                    double percentage = (points * 100.0) / course.getRequiredPointsToCompleteCourse();
+                    return String.format("%-5d %-9d %.1f%%", student.getId(), points, percentage);
+                })
+                .forEach(result::add);
+
+        return result;
     }
 }

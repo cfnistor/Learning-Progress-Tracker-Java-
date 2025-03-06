@@ -1,5 +1,11 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: All tests will pass successfully
+  - text: All tests will compile
+  - text: Tests won't compile because of incorrectly specified method sources
+  - text: All tests will fail
+  - text: Some tests will pass and some will fail
 files:
   - name: src/Task.java
     visible: true

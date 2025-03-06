@@ -1,5 +1,10 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: next
+  - text: square
+  - text: previous
+  - text: mult
 files:
   - name: src/Task.java
     visible: true

@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: Priority Queue
+  - text: Vector Class
+  - text: Queue Interface
+  - text: Stack Class
+  - text: Deque Interface
 files:
   - name: src/Task.java
     visible: true

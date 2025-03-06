@@ -1,5 +1,10 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: "add(int index, E element)"
+  - text: remove(int index)
+  - text: get(int index)
+  - text: "set(int index, E element)"
 files:
   - name: src/Task.java
     visible: true

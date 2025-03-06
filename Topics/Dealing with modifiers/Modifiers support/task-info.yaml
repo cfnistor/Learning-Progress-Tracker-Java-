@@ -1,5 +1,10 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: <code>Method</code>
+  - text: <code>Field</code>
+  - text: <code>Constructor</code>
+  - text: <code>Modifier</code>
 files:
   - name: src/Task.java
     visible: true

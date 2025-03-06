@@ -1,5 +1,10 @@
 type: choice
-is_multiple_choice: false
+is_multiple_choice: true
+options:
+  - text: Map
+  - text: Set
+  - text: Queue
+  - text: Stack
 files:
   - name: src/Task.java
     visible: true

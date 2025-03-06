@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+  - text: '"a342"'
+  - text: '"aab3bcabc2abc"'
+  - text: '"aab3bc"'
+  - text: '"aab3bcabc"'
+  - text: '"aab3bc4abcabc2abc"'
 files:
   - name: src/Task.java
     visible: true

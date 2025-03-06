@@ -1,4 +1,18 @@
 type: matching
+captions:
+  - addFirst
+  - removeFirst
+  - getFirst
+  - addLast
+  - removeLast
+  - getLast
+options:
+  - offerFirst
+  - peekFirst
+  - pollLast
+  - offerLast
+  - peekLast
+  - pollFirst
 files:
   - name: src/Task.java
     visible: true
@@ -6,3 +20,10 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2764#comment
 status: Solved
 record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
