@@ -1,12 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: It indicates that the test framework reads parameters from the gradle.properties
-      file.
-  - text: It denotes a test method that will be invoked multiple times with different
-      arguments.
-  - text: It means that the order of execution of tests is defined by special parameters
-  - text: It specifies that the test class constructor has multiple parameters.
 files:
   - name: src/Task.java
     visible: true

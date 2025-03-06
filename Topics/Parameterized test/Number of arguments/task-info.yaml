@@ -1,12 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: 0
-  - text: 1
-  - text: 2
-  - text: 5
-  - text: 12
-  - text: The limit is set in JVM
 files:
   - name: src/Task.java
     visible: true

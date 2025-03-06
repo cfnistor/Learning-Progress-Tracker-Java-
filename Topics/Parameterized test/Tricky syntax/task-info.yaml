@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: test1
-  - text: test4
-  - text: test2
-  - text: test5
-  - text: test3
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

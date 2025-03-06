@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: "A method of a factory always returns an abstract class, not a concrete one."
-  - text: A factory always has only a single method.
-  - text: There are several types of factories.
-  - text: "Instead of using the <b>new</b> operator, clients receive objects from factories."
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

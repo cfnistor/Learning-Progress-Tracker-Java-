@@ -1,10 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: UKGermanyFranceNorway
-  - text: GermanyFranceUK
-  - text: GermanyFranceNorwayUK
-  - text: GermanyFranceNorway
 files:
   - name: src/Task.java
     visible: true

@@ -1,9 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: you need to sort elements and put them in order
-  - text: you want to store elements as key-value pairs
-  - text: you wish to have complexity O(1) for get() and put() methods
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

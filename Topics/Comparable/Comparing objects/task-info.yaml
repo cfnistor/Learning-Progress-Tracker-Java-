@@ -1,9 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: "None, we have to write our own method for it"
-  - text: Equals method is all we need for it
-  - text: Comparable
 files:
   - name: src/Task.java
     visible: true

@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: 5
-  - text: Infinite number of times
-  - text: 4
-  - text: 6
-  - text: 3
 files:
   - name: src/Task.java
     visible: true

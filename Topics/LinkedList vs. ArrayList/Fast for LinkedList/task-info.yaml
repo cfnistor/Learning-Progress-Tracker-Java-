@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: "set(int index, E element)"
-  - text: get(int index)
-  - text: "add(int index, E element)"
-  - text: add(E e)
-  - text: addFirst(E e)
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

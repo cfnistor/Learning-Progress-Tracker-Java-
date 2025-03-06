@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: "&quot;\\\\d{3}\\\\w&quot;"
-  - text: "&quot;\\\\d{3}\\\\D&quot;"
-  - text: "&quot;\\\\d{3}\\\\W&quot;"
-  - text: "&quot;\\\\d{3}\\\\S&quot;"
-  - text: "&quot;\\\\d{3}[A-Z]&quot;"
 files:
   - name: src/Task.java
     visible: true

@@ -1,11 +1,5 @@
 type: choice
 is_multiple_choice: false
-options:
-  - text: "Yes, it should have the same boolean value"
-  - text: "No, the correct implementation should have different boolean values for these\
-    \ two conditions"
-  - text: "No, it's not important, these two conditions may have the same or different\
-    \ values"
 files:
   - name: src/Task.java
     visible: true

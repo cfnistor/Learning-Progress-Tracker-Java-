@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: LongUnaryOperator
-  - text: ToLongFunction&lt;Long&gt;
-  - text: "BiFunction&lt;Long, Long, Long&gt;"
-  - text: LongFunction&lt;Long&gt;
-  - text: "Function&lt;Long, Long&gt;"
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

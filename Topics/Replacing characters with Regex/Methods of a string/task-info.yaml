@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: replaceNext
-  - text: replaceAll
-  - text: replaceFirst
-  - text: replace
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

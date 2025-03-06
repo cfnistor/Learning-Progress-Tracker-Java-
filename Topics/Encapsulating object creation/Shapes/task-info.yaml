@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: ShapeFactory factory = new ShapeFactory(); factory.getShape("POLY");
-  - text: ShapeFactory.getShape("POLYGON");
-  - text: new Polygon();
-  - text: ShapeFactory factory = new ShapeFactory(); factory.getShape("polygon");
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

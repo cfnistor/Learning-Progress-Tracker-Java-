@@ -6,17 +6,3 @@ files:
 feedback_link: https://hyperskill.org/learn/step/12976#comment
 status: Solved
 record: -1
-rows:
-  - Rating
-  - VideoGame
-  - Customer
-columns:
-  - Comparable
-  - Comparator
-selected:
-  - - false
-    - false
-  - - false
-    - false
-  - - false
-    - false

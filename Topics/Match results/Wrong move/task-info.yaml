@@ -1,11 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: Invoking  <b>matcher.start()</b> before <b>matcher.group()</b>
-  - text: Invoking <b>matcher.find()</b> for the second time
-  - text: Invoking <b>matcher.start()</b> before <b>matcher.find()</b>
-  - text: Invoking  <b>matcher.end()</b> after <b>matcher.find()</b> method returned
-      <b>false</b>
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true

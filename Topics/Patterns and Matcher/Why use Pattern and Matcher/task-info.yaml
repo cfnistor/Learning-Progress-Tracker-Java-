@@ -1,10 +1,5 @@
 type: choice
-is_multiple_choice: true
-options:
-  - text: These classes provide rich API.
-  - text: These classes are newer and easier to use.
-  - text: Strings don't support some metacharacters in regexes.
-  - text: Pattern and Matcher improve the performance of regex processing.
+is_multiple_choice: false
 files:
   - name: src/Task.java
     visible: true
