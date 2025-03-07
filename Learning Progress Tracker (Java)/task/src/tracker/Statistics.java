@@ -184,4 +184,23 @@ public class Statistics {
 
         return result;
     }
+
+    public static List<String> getCompletedCourses() {
+        final List<String> result = new ArrayList<>();
+        final Set<Integer> notifiedStudents = new HashSet<>();
+
+        students.values().stream()
+                .filter(student -> Arrays.stream(Course.values())
+                        .anyMatch(course -> student.getCoursePoints().getOrDefault(course, 0) >= course.getRequiredPointsToCompleteCourse() && !student.isNotificationSent(course)))
+                .forEach(student -> {
+                    Arrays.stream(Course.values())
+                            .filter(course -> student.getCoursePoints().getOrDefault(course, 0) >= course.getRequiredPointsToCompleteCourse() && !student.isNotificationSent(course))
+                            .forEach(student::sendNotification);
+                    notifiedStudents.add(student.getId());
+                });
+
+        result.add(String.format("Total %d students have been notified.", notifiedStudents.size()));
+        return result;
+    }
+
 }

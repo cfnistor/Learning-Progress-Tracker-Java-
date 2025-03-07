@@ -66,6 +66,8 @@ public class Menu {
                             }
                         }
                     } while (!"back".equalsIgnoreCase(result.getFirst()));
+                } else if(command == Command.NOTIFY) {
+                    notifyStudents();
                 } else {
                     command.execute();
                 }
@@ -74,6 +76,11 @@ public class Menu {
 
         }
         scanner.close();
+    }
+
+    public static void notifyStudents() {
+        List<String> notifications = Statistics.getCompletedCourses();
+        notifications.forEach(System.out::println);
     }
 
     public static void addStudents() {

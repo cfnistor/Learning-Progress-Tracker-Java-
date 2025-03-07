@@ -175,4 +175,22 @@ class MenuTest {
         assertEquals("10001 24        4.0%", results.get(1));
         assertEquals("10000 21        3.5%", results.get(2));
     }
+
+    @Test
+    void testNotifyStudents() {
+        Student.getStudents().clear();
+        Student.getEmails().clear();
+        Student.resetIdCounter();
+
+        Student.addStudent("John Doe johnd@email.net");
+        Student.addStudent("Jane Spark jspark@yahoo.com");
+
+
+        Student.updatePoints("10000", 600, 400, 0, 0);
+
+        List<String> results = Statistics.getCompletedCourses();
+
+        assertEquals(1, results.size());
+        assertEquals("Total 1 students have been notified.", results.getFirst());
+    }
 }

@@ -17,6 +17,7 @@ public class Student {
     private Map<Course, Integer> coursePoints = new EnumMap<>(Course.class);
     private static Map<Integer, Student> students = new HashMap<>();
     private static Set<String> emails = new HashSet<>();
+    private Set<Course> notifications = new HashSet<>();
 
     public Student(String firstName, String lastName, String email) {
         id = idCounter++;
@@ -53,6 +54,12 @@ public class Student {
 
     public static boolean isEmailUsed(String email) {
         return emails.contains(email);
+    }
+
+    public Set<Course> getSentNotifications() { return notifications; }
+
+    public boolean isNotificationSent(Course course) {
+        return notifications.contains(course);
     }
 
     public Map<Course, Integer> getCoursePoints() {
@@ -144,6 +151,19 @@ public class Student {
         } else {
             System.out.println("Incorrect credentials.");
         }
+    }
+
+    public boolean sendNotification(Course course) {
+        if (isNotificationSent(course)) {
+            return false;
+        }
+
+        System.out.printf("To: %s\n", email);
+        System.out.println("Re: Your Learning Progress");
+        System.out.printf("Hello, %s %s! You have accomplished our %s course!\n", firstName, lastName, course.getName());
+        notifications.add(course);
+
+        return true;
     }
 
     public String printDetails() {

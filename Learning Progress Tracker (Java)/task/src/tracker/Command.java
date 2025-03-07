@@ -39,6 +39,12 @@ public enum Command {
             Menu.statistics(ScannerUtil.getScanner());
         }
     },
+    NOTIFY("notify") {
+        @Override
+        public void execute() {
+            Menu.notifyStudents();
+        }
+    },
     UNKNOWN("unknown") {
         @Override
         public void execute() {
